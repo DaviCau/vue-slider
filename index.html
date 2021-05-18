@@ -18,7 +18,7 @@
                 <div class="center">
                     <img :src="img[indexImg]">
                     <div class="slide-circles">
-                        <i v-for="(item, index) in img" class="fa-circle" :class=" index==indexImg ? 'fas' : 'far'"></i>
+                        <i v-for="(item, index) in img" class="fa-circle" :class=" index==indexImg ? 'fas' : 'far'" @click="indexImg = index"></i>
                     </div>
                 </div>
                 <div class="right">
