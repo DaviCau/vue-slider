@@ -22,7 +22,15 @@ var app = new Vue ({
             if (this.indexImg == -1) {
                 this.indexImg = this.img.length - 1;
             }
+        },
+        goToImage: function (newIndex) {
+            this.indexImg = newIndex;
         }
+    },
+    created: function() {
+        var vm = this;
+        setInterval(function() {
+            vm.indexIncrase();
+        }, 3000)
     }
-    
-})
+});
